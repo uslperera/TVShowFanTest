@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Question</h3>
+    <button id="deleteQuestion" class="btn btn-danger btn-sm">Delete</button>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <input type="text" class="form-control" id="questionTitle" placeholder="Title" value="<%=title%>" />
+    </div>
+    <div class="form-group">
+      <span>
+        <input type="hidden" id="questionImage" value="<%=image%>" />
+        <input id="fileUpload" type="file" class="form-control" placeholder="Image" />
+      </span>
+      <div id="img">
+      </div>
+    </div>
+    <button id="addChoice" class="btn btn-default" type="button">Add Choice</button>
+    <br/>
+    <br/>
+    <div id='choices'>
+    </div>
+  </div>
+</div>

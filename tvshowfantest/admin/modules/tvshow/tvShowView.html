@@ -1,0 +1,31 @@
+<div id="newTVShowModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="closeTVShow" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">TV Show</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+              <input id="tvShowTitle" type="text" class="form-control" id="name" placeholder="Title" value="<%= tvShow.name %>">
+            </div>
+            <div class="form-group">
+              <textarea id="tvShowDescription" class="form-control" rows="3" placeholder="Description"><%=tvShow.description %></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeTVShow" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="saveTVShow" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

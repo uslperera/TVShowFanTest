@@ -1,0 +1,69 @@
+<div id="newQuizModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">New Quiz</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a data-toggle="tab" href="#details">Details</a></li>
+                    <li><a data-toggle="tab" href="#questions">Questions</a></li>
+                </ul>
+                <br/>
+                <div class="tab-content">
+                    <div id="details" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="form-group">
+                                    <input id="quizTitle" type="text" class="form-control" id="title" placeholder="Title">
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="quizDescription" class="form-control" rows="3" placeholder="Description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input id="quizTime" type="number" class="form-control" id="Time" placeholder="Time in Seconds">
+                                </div>
+                                <div class="form-group">
+                                    <select id="quizTVShow" class="form-control">
+                                        <option selected>Select TV Show</option>
+                                        <option value="1">1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="questions" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-1">
+                                <div class="input-group">
+                                    <input id="questionCount" type="number" class="form-control" placeholder="Questions">
+                                    <span class="input-group-btn">
+                                    <button id="addQuestion" class="btn btn-default" type="button">Add</button>
+                                </span>
+                                </div>
+                                <br/>
+                                <div class="questions">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="save" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,61 @@
+<div id="newQuizModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="closeQuiz" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Quiz</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active"><a data-toggle="tab" href="#details">Details</a></li>
+          <li><a data-toggle="tab" href="#questions">Questions</a></li>
+        </ul>
+        <br/>
+        <div class="tab-content">
+          <div id="details" class="tab-pane fade in active">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                  <input id="quizTitle" type="text" class="form-control" id="title" placeholder="Title" value="<%= quiz.title %>">
+                </div>
+                <div class="form-group">
+                  <textarea id="quizDescription" class="form-control" rows="3" placeholder="Description"><%= quiz.description %></textarea>
+                </div>
+                <div class="form-group">
+                  <input id="quizTime" type="number" class="form-control" id="Time" placeholder="Time in Seconds" value="<%= quiz.time %>">
+                </div>
+                <div class="form-group">
+                  <select id="quizTVShow" class="form-control" value="<%= quiz.tvshow %>">
+                    <option selected value>Select TV Show</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div id="questions" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-12">
+                <button id="addQuestion" class="btn btn-info" type="button">Add Question</button>
+                <br/>
+                <br/>
+                <div class="questions">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeQuiz" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="saveQuiz" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

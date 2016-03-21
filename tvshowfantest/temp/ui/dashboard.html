@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Administrator Panel</title>
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default i-navbar">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand i-nav-title" href="">TVShowFanTest</a>
+            </div>
+            <!-- /.navbar-header -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">Overview</a></li>
+                    <li><a href="#quizzes">Reports</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Export</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-md-10" style="background: white">
+                <div id="quizzes">
+                    <h3>Quizzes</h3>
+                    <p>Some content.</p>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <button id="add" class="btn btn-primary" data-toggle="modal" data-target="#newQuizModal">Add</button>
+                        </div>
+                    </div>
+                    <br/>
+                    <table class="table table-hover">
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>Game of Thrones</td>
+                            <td>affffaff</td>
+                            <td>
+                                <a>View</a>
+                                <a>Edit</a>
+                                <a>Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Arrow</td>
+                            <td>affffaff</td>
+                            <td>
+                                <a>View</a>
+                                <a>Edit</a>
+                                <a>Delete</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="newQuizModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">New Quiz</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-1">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="title" placeholder="Title">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" placeholder="Description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="Time" placeholder="Time in Minutes">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option selected>Select TV Show</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="number" class="form-control" placeholder="Questions">
+                                    <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Add</button>
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+                    <div class="questions">
+                        <div id="question">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="q_title" placeholder="Title">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control" id="image" placeholder="Image">
+                            </div>
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Choices">
+                                <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">Add</button>
+                                    </span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                        <input type="checkbox" aria-label="...">
+                                    </span>
+                                <input type="text" class="form-control" aria-label="...">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="../../assets/js/jquery-2.1.4.js"></script>
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script>
+        $(".nav-sidebar a").on('click', function (e) {
+            alert('aa');
+            e.preventDefault(); // stops link form loading
+            $('.content').hide(); // hides all content divs
+            $($(this).attr('href')).show(); //get the href and use it find which div to show
+        });
+    </script>
+</body>
+
+</html>

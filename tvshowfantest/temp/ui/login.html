@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Administrator Panel</title>
+        <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+        <link href="../../assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-default i-navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand i-nav-title" href="">TVShowFanTest</a>
+                </div>
+                <!-- /.navbar-header -->
+
+                <button id="logout" class="btn btn-default">Logout</button>
+                <label id="username">Admin</label>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div id="login-panel" class="col-md-4 col-md-offset-4">
+                        <h3 style="text-align: center">Administrator Login</h3>
+                        <form>
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <button class="btn btn-primary" type="submit">Login</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/js/jquery-2.1.4.js"></script>
+        <script src="../../assets/js/bootstrap.js"></script>
+    </body>
+</html>
